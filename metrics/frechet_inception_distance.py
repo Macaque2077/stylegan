@@ -26,7 +26,7 @@ class FID(metric_base.MetricBase):
 
     def _evaluate(self, Gs, num_gpus):
         minibatch_size = num_gpus * self.minibatch_per_gpu
-        inception = misc.load_pkl('https://drive.google.com/uc?id=1MzTY44rLToO5APn8TZmfR7_ENSe5aZUn') # inception_v3_features.pkl
+        inception = misc.load_pkl(r'https://doc-00-1s-docs.googleusercontent.com/docs/securesc/fjn4ce13omjpstdnseja50iibnsboa2q/33okfgp0pk73e9tvenkk48lqfa57liv7/1632280650000/07054543307721243039/07054543307721243039/1FXyH0jl-_fh_L5-cQ5-qRU9GYiJ5L5JP?e=download&authuser=0&nonce=ishflkcedlr62&user=07054543307721243039&hash=4cdocl46e0kcpliqkqp10j67ccps6c33') # inception_v3_features.pkl
         activations = np.empty([self.num_images, inception.output_shape[1]], dtype=np.float32)
 
         # Calculate statistics for reals.

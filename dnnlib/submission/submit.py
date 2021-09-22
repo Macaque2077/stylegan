@@ -172,7 +172,9 @@ def _create_run_dir_local(submit_config: SubmitConfig) -> str:
         raise RuntimeError("The run dir already exists! ({0})".format(run_dir))
 
     print("Creating the run dir: {}".format(run_dir))
-    os.makedirs(run_dir)
+    print(run_dir)
+    print()
+    os.makedirs(r"{}".format(run_dir))
 
     return run_dir
 
